@@ -3,10 +3,12 @@ import { AddCategory } from './components/AddCategory';
 import { GifGird } from './components/GifGird';
 
 //forma basica de creacion de componentes
-export const GifExpertApp = () => {
+export const GifExpertApp = ({defaultCategories = []}) => {
 
     //const categories =['One Punch',' Samuria X','Dragon Ball'];
-    const [categories, setCategories] = useState(['One Punch','pokemon']);
+    const [categories, setCategories] = useState (defaultCategories);
+    
+    //const [categories, setCategories] = useState(['One Punch']);
 
     //const handleAdd = ()=>{
         

@@ -1,14 +1,15 @@
 import React,{ } from 'react'
+import PropTypes  from 'prop-types';
 import { useFerchGifs } from '../hooks/useFerchGifs'
 import { GifGridItem } from './GifGridItem';
 
 export const GifGird = ({category}) => {
 
-    const {data:images,loading} = useFerchGifs(category);
+    const {data:images, loading} = useFerchGifs(category);
 
     return (
         <>
-        <h3 className='animate__animated animate__fadeIn' > { category}</h3>
+        <h3 className='animate__animated animate__fadeIn' > { category }</h3>
 
             { loading && <p className= 'animate__animated animate__flash'>loading...</p>}
 
@@ -25,4 +26,10 @@ export const GifGird = ({category}) => {
             </div>}
         </>
     )
+}
+
+GifGird.protoTypes={
+
+    category: PropTypes.string.isRequired
+
 }

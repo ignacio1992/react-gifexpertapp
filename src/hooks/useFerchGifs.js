@@ -13,19 +13,20 @@ export const useFerchGifs = ( category ) => {
 
         getGifs( category )
             .then( imgs =>{
-                setTimeout(()=>{
+                
+                //setTimeout(()=>{
                     setState({
                         data:imgs,
                         loading: false
-                    })
+                    });
 
-                },1500);
+                //},1000);
 
             })
        
      },[category]) 
 
-    return state; // {dadta:[], loading : true};
+    return state; // {data:[], loading : true};
 }
 
 

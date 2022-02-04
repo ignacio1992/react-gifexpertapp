@@ -12,9 +12,8 @@ export const AddCategory = ( { setCategories } ) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         //console.log('Submit hecho');
-        
         if ( InputValue.trim().length >2 ) {
-            setCategories(anime =>[InputValue,...anime] );
+            setCategories(anime =>[InputValue,...anime,] );
             setInputValue('');   
         }
     }
@@ -22,6 +21,7 @@ export const AddCategory = ( { setCategories } ) => {
     return (
         
         <form onSubmit ={handleSubmit}>
+        <p>{ InputValue }</p>
             <input 
              type ='text'
              value={InputValue}
@@ -35,3 +35,4 @@ export const AddCategory = ( { setCategories } ) => {
 AddCategory.propTypes = {
     setCategories: PropTypes.func.isRequired
 }
+//el error es <p>{ InputValue }</p>
